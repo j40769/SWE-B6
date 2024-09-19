@@ -9,6 +9,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SweB6Application {
 
 	public static void main(String[] args) {
+
+		System.out.println("Test1 9/19");
 		SpringApplication.run(SweB6Application.class, args);
 		//database thingy use postman
 
