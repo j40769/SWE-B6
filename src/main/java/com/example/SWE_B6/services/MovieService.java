@@ -12,10 +12,22 @@ public class MovieService implements Services{
 
     @Autowired
     public MovieRepo movieRepo;
+
     @Override
     public List<Movie> getAll() {
         System.out.println("Running getAll");
         return movieRepo.findAll();
+    }
+
+    @Override
+    public Movie getMovieByTitle(String name) {
+        return movieRepo.getMovieByTitle(name);
+    }
+
+    @Override
+    public List<Movie> getMoviesByTitle(String name) {
+
+        return movieRepo.getMoviesByTitle(name);
     }
 
     @Override

@@ -20,6 +20,8 @@ public class Movie {
     private String rating;
     private String movieLength;
     private String description;
+    private String currentlyPlaying;
+    private String upcoming;
 
 
     Movie(){
@@ -29,7 +31,8 @@ public class Movie {
         this.title = title;
     }
 
-    public Movie(String title, String trailerLink, String picture, String directorName, String yearRelease, String rating, String movieLength, String description) {
+    public Movie(String title, String trailerLink, String picture, String directorName, String yearRelease,
+                 String rating, String movieLength, String description, String currentlyPlaying, String upcoming) {
         this.title = title;
         this.trailerLink = trailerLink;
         this.picture = picture;
@@ -38,6 +41,8 @@ public class Movie {
         this.rating = rating;
         this.movieLength = movieLength;
         this.description = description;
+        this.currentlyPlaying = currentlyPlaying;
+        this.upcoming = upcoming;
     }
 
     public long getId() {
@@ -110,5 +115,39 @@ public class Movie {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getCurrentlyPlaying() {
+        return currentlyPlaying;
+    }
+
+    public void setCurrentlyPlaying(String currentlyPlaying) {
+        this.currentlyPlaying = currentlyPlaying;
+    }
+
+    public String getUpcoming() {
+        return upcoming;
+    }
+
+    public void setUpcoming(String upcoming) {
+        this.upcoming = upcoming;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", trailerLink='" + trailerLink + '\'' +
+                ", picture='" + picture + '\'' +
+                ", directorName='" + directorName + '\'' +
+                ", yearRelease='" + yearRelease + '\'' +
+                ", rating='" + rating + '\'' +
+                ", movieLength='" + movieLength + '\'' +
+                ", description='" + description + '\'' +
+                ", currentlyPlaying='" + currentlyPlaying + '\'' +
+                ", upcoming='" + upcoming + '\'' +
+                '}';
     }
 }

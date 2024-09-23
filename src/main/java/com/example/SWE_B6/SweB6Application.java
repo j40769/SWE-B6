@@ -10,6 +10,8 @@ public class SweB6Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SweB6Application.class, args);
+
+
 		//database thingy use postman
 
 
