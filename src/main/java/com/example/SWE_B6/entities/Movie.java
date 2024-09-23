@@ -13,12 +13,31 @@ public class Movie {
     private long id;
 
     private String title;
+    private String trailerLink;
+    private String picture;
+    private String directorName;
+    private String yearRelease;
+    private String rating;
+    private String movieLength;
+    private String description;
+
 
     Movie(){
 
     }
     public Movie(String title){
         this.title = title;
+    }
+
+    public Movie(String title, String trailerLink, String picture, String directorName, String yearRelease, String rating, String movieLength, String description) {
+        this.title = title;
+        this.trailerLink = trailerLink;
+        this.picture = picture;
+        this.directorName = directorName;
+        this.yearRelease = yearRelease;
+        this.rating = rating;
+        this.movieLength = movieLength;
+        this.description = description;
     }
 
     public long getId() {
@@ -37,13 +56,59 @@ public class Movie {
         this.title = title;
     }
 
+    public String getTrailerLink() {
+        return trailerLink;
+    }
 
+    public void setTrailerLink(String trailerLink) {
+        this.trailerLink = trailerLink;
+    }
 
+    public String getPicture() {
+        return picture;
+    }
 
+    public void setPicture(String picture) {
+        this.picture = picture;
+    }
 
+    public String getDirectorName() {
+        return directorName;
+    }
 
+    public void setDirectorName(String directorName) {
+        this.directorName = directorName;
+    }
 
+    public String getYearRelease() {
+        return yearRelease;
+    }
 
+    public void setYearRelease(String yearRelease) {
+        this.yearRelease = yearRelease;
+    }
 
+    public String getRating() {
+        return rating;
+    }
 
+    public void setRating(String rating) {
+        this.rating = rating;
+    }
+
+    public String getMovieLength() {
+        return movieLength;
+    }
+
+    public void setMovieLength(String movieLength) {
+        this.movieLength = movieLength;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }
