@@ -4,7 +4,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Column;
 
 @Entity
 public class Movie {
@@ -13,41 +12,34 @@ public class Movie {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name = "movie_name", nullable = false)
-    private String movieName;
-
-    @Column(name = "director_name", nullable = false)
+    private String title;
+    private String trailerLink;
+    private String picture;
     private String directorName;
+    private String yearRelease;
+    private String rating;
+    private String movieLength;
+    private String description;
 
-    @Column(name = "year_released", nullable = false)
-    private int yearReleased;
 
-    @Column(name = "movie_rating")
-    private double movieRating;
+    Movie(){
 
-    @Column(name = "movie_poster")
-    private String moviePoster;
-
-    @Column(name = "trailer_url")
-    private String trailerUrl;
-
-    @Column(name = "movie_length")
-    private int movieLength;
-
-    @Column(name = "short_description")
-    private String shortDescription;
-
-    @Column(name = "title")
-    private String title; // Added title field
-
-    // Constructor
-    public Movie() {}
-
-    public Movie(String title) {
+    }
+    public Movie(String title){
         this.title = title;
     }
 
-    // Getters and Setters
+    public Movie(String title, String trailerLink, String picture, String directorName, String yearRelease, String rating, String movieLength, String description) {
+        this.title = title;
+        this.trailerLink = trailerLink;
+        this.picture = picture;
+        this.directorName = directorName;
+        this.yearRelease = yearRelease;
+        this.rating = rating;
+        this.movieLength = movieLength;
+        this.description = description;
+    }
+
     public long getId() {
         return id;
     }
@@ -56,12 +48,28 @@ public class Movie {
         this.id = id;
     }
 
-    public String getMovieName() {
-        return movieName;
+    public String getTitle() {
+        return title;
     }
 
-    public void setMovieName(String movieName) {
-        this.movieName = movieName;
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getTrailerLink() {
+        return trailerLink;
+    }
+
+    public void setTrailerLink(String trailerLink) {
+        this.trailerLink = trailerLink;
+    }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
     }
 
     public String getDirectorName() {
@@ -72,59 +80,35 @@ public class Movie {
         this.directorName = directorName;
     }
 
-    public int getYearReleased() {
-        return yearReleased;
+    public String getYearRelease() {
+        return yearRelease;
     }
 
-    public void setYearReleased(int yearReleased) {
-        this.yearReleased = yearReleased;
+    public void setYearRelease(String yearRelease) {
+        this.yearRelease = yearRelease;
     }
 
-    public double getMovieRating() {
-        return movieRating;
+    public String getRating() {
+        return rating;
     }
 
-    public void setMovieRating(double movieRating) {
-        this.movieRating = movieRating;
+    public void setRating(String rating) {
+        this.rating = rating;
     }
 
-    public String getMoviePoster() {
-        return moviePoster;
-    }
-
-    public void setMoviePoster(String moviePoster) {
-        this.moviePoster = moviePoster;
-    }
-
-    public String getTrailerUrl() {
-        return trailerUrl;
-    }
-
-    public void setTrailerUrl(String trailerUrl) {
-        this.trailerUrl = trailerUrl;
-    }
-
-    public int getMovieLength() {
+    public String getMovieLength() {
         return movieLength;
     }
 
-    public void setMovieLength(int movieLength) {
+    public void setMovieLength(String movieLength) {
         this.movieLength = movieLength;
     }
 
-    public String getShortDescription() {
-        return shortDescription;
+    public String getDescription() {
+        return description;
     }
 
-    public void setShortDescription(String shortDescription) {
-        this.shortDescription = shortDescription;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

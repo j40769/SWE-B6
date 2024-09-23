@@ -8,11 +8,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class MovieService implements MovieServiceInterface {
+public class MovieService implements Services{
 
     @Autowired
     public MovieRepo movieRepo;
-
     @Override
     public List<Movie> getAll() {
         System.out.println("Running getAll");
@@ -22,11 +21,12 @@ public class MovieService implements MovieServiceInterface {
     @Override
     public String addMovie(Movie m) {
         Movie mov = movieRepo.save(m);
+
         return "Updated! " + mov.toString();
     }
 
     @Override
     public String deleteMovie(long id) {
-        return null;  // Implement deletion logic here
+        return null;
     }
 }
